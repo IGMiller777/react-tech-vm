@@ -20,27 +20,15 @@ const Counter = () => {
     }
 
 
-    const renderTags = () => {
-        if(tags.length == 0) {
-            return 'No tags';
-        }
-        return tags.map((tag) => {
-            return <li
-                key={tag}
-                className="btn btn-primary btn-sm"
-                onClick={handleChange}>
-                {tag}</li>
-        })
-    }
     return (
-            <>
+            <div>
                 <ul>
                     {}
                 </ul>
                 <button className="btn btn-primary btn-sm m-2" onClick={handleDicrement}>-</button>
                 <span className="badge m-2 bg-primary">{formatCount()}</span>
                 <button className="btn btn-primary btn-sm m-2" onClick={handleIncrement}>+</button>
-            </> 
+            </div> 
         )
 
 } 
