@@ -1,27 +1,28 @@
 import React, {useState} from "react"
 
-const Counter = () => { 
-    const [count, setCount] = useState(0);
+const Counter = (props) => { 
+    const [value, setValue] = useState(props.value);
 
     const formatCount = () => {
-        return count === 0 ? 'empty' : count;
+        return value === 0 ? 'empty' : value;
     }
 
     const handleIncrement = () => {
-        setCount((prevState) => prevState + 1)
+        setValue((prevState) => prevState + 1)
     }
     
     const handleDicrement = () => {
-        setCount((prevState) => prevState - 1)
+        setValue((prevState) => prevState - 1)
     }
 
     const handleChange = () => {
-        return setCount(['tag4', 'tag5'])
+        return setValue(['tag4', 'tag5'])
     }
 
 
     return (
             <div>
+                {props.children}
                 <ul>
                     {}
                 </ul>
