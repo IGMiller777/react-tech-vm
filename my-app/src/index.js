@@ -1,12 +1,9 @@
 import React from "react";
-// import reactDom from "react-dom";
-import {createRoot} from "react-dom/client";
+import reactDom from "react-dom";
 import "bootstrap/dist/css/bootstrap.css"
-import Counter from "./components/counter";
+import App from "./app"
 
-const App = () => { 
-    return <Counter/>
-}
 
-// reactDom.render(<App/>, document.getElementById('root'));
-createRoot(document.getElementById('root')).render(<App/>);
+
+
+reactDom.render(<App />, document.getElementById('root'))
